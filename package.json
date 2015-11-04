@@ -1,0 +1,9 @@
+{
+  "name": "harkins-rule30",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "pretest": "jshint ."
+  },
+  "description": "Coding Assignment for Webassign"
+}
