@@ -82,7 +82,14 @@
         }
         console.log();
 
-        outputStep(1, numOfSteps);
+        //Small bug and this fixes it for when we only display the top value(1 row)
+        //numOfSteps is 1 minus the value the user entered which would now be zero
+        if(numOfSteps != 0) {
+            outputStep(1, numOfSteps);
+        }
+        else{
+            enterValue();
+        }
 
     }
 
@@ -100,10 +107,10 @@
             for (var i = 1; i <= maxWidth; i++ )
             {
                 //Rule30 Rule Set
-                if ( ( lineCopy[i-1] == ' ' && lineCopy[i] == ' ' && lineCopy[i+1] == '*' ) ||
-                    ( lineCopy[i-1] == ' ' && lineCopy[i] == '*' && lineCopy[i+1] == ' ' ) ||
-                    ( lineCopy[i-1] == ' ' && lineCopy[i] == '*' && lineCopy[i+1] == '*' ) ||
-                    ( lineCopy[i-1] == '*' && lineCopy[i] == ' ' && lineCopy[i+1] == ' ' ) )
+                if ( ( lineCopy[i-1] === ' ' && lineCopy[i] === ' ' && lineCopy[i+1] === '*' ) ||
+                    ( lineCopy[i-1] === ' ' && lineCopy[i] === '*' && lineCopy[i+1] === ' ' ) ||
+                    ( lineCopy[i-1] === ' ' && lineCopy[i] === '*' && lineCopy[i+1] === '*' ) ||
+                    ( lineCopy[i-1] === '*' && lineCopy[i] === ' ' && lineCopy[i+1] === ' ' ) )
                 {
                     line[i] = '*';
                 }
@@ -121,10 +128,10 @@
             console.log();
 
             //Recursively call function
-            if (index != stopAt) {
+            if (index !== stopAt) {
                 outputStep((index + 1), stopAt);
             }
-            if(index == stopAt){
+            if(index === stopAt){
                 enterValue();
             }
 
