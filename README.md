@@ -10,6 +10,6 @@ Node.js
 
 - Clone this repository
 - Change directory to harkinsRule30
-- To Run Enter Code Below
+- To run the solution, enter the line below in a cmd/terminal window
 - node server.js
 
