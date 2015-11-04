@@ -25,6 +25,7 @@
     console.log('Please enter 0 for continuous execution or the number of steps you would ' +
         'like to output(< '+maxRows+'). To stop execution please press "s" then enter.');
 
+    //Prompt User to enter in first value
     enterValue();
 
 
@@ -135,6 +136,6 @@
                 enterValue();
             }
 
-        }, (1500));
+        }, (config.stepInterval));
     };
 })();
