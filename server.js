@@ -52,6 +52,7 @@
         rl.question("Enter your value: ", function (answer) {
             if (isNaN(answer) || answer < 0 || answer > maxRows) {
                 console.log("You did not enter a valid number.");
+                enterValue();
             }
             else if (answer == 0) {
                 //Just keep going
